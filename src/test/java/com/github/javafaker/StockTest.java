@@ -10,12 +10,12 @@ public class StockTest extends AbstractFakerTest {
 
     @Test
     public void testNasdaq() {
-        assertThat(faker.stock().nsdqSymbol(), not(isEmptyOrNullString()));
+        assertThat(faker.stock().nsdqSymbol(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testNYSE() {
-        assertThat(faker.stock().nyseSymbol(), not(isEmptyOrNullString()));
+        assertThat(faker.stock().nyseSymbol(), not(CoreMatchers.notNullValue()));
     }
 
 }

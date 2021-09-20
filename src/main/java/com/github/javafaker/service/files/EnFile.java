@@ -3,20 +3,21 @@ package com.github.javafaker.service.files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class EnFile {
+    private static final Pattern YAML = Pattern.compile(".yml");
     private final String file;
     private final String path;
 
     private EnFile(String file) {
-        this(file, file.replaceFirst(".yml", ""));
+        this(file, YAML.matcher(file).replaceFirst(""));
     }
 
     private EnFile(String file, String path) {
         this.file = file;
         this.path = path;
     }
-
 
     public String getFile() {
         return file;
@@ -26,27 +27,37 @@ public class EnFile {
         return path;
     }
 
-    private static List<String> FILES = Arrays.asList("address.yml",
+    private static final List<String> FILES = Arrays.asList(
+            "address.yml",
+            "adjective.yml",
             "ancient.yml",
             "animal.yml",
             "app.yml",
             "appliance.yml",
             "aqua_teen_hunger_force.yml",
             "artist.yml",
+            "australia.yml",
             "aviation.yml",
             "back_to_the_future.yml",
             "barcode.yml",
             "bank.yml",
             "basketball.yml",
             "beer.yml",
+            "big_bang_theory.yml",
+            "bird.yml",
+            "blood.yml",
             "bojack_horseman.yml",
             "book.yml",
             "bossa_nova.yml",
             "breaking_bad.yml",
             "buffy.yml",
             "business.yml",
+            "camera.yml",
             "cannabis.yml",
+            "cat.yml",
+            "chiquito.yml",
             "chuck_norris.yml",
+            "clash_of_clan.yml",
             "code.yml",
             "coffee.yml",
             "coin.yml",
@@ -55,36 +66,49 @@ public class EnFile {
             "community.yml",
             "company.yml",
             "compass.yml",
+            "computer.yml",
+            "conan.yml",
             "construction.yml",
+            "control.yml",
             "cosmere.yml",
             "country.yml",
             "crypto_coin.yml",
             "currency.yml",
             "dc_comics.yml",
             "demographic.yml",
+            "departed.yml",
             "dessert.yml",
             "device.yml",
             "disease.yml",
+            "dnd.yml",
+            "dog.yml",
+            "doraemon.yml",
             "dota.yml",
             "dr_who.yml",
             "dragon_ball.yml",
+            "driving_license.yml",
+            "drone.yml",
             "dumb_and_dumber.yml",
             "dune.yml",
             "educator.yml",
             "elder_scrolls.yml",
             "electrical_components.yml",
-            "esport.yml",
+            "emotion.yml",
             "englandfootball.yml",
+            "esport.yml",
             "fallout.yml",
             "family_guy.yml",
             "famous_last_words.yml",
             "file.yml",
+            "final_space.yml",
             "finance.yml",
             "food.yml",
             "football.yml",
             "fresh_prince_of_bel_air.yml",
             "friends.yml",
             "funny_name.yml",
+            "futurama.yml",
+            "game.yml",
             "game_of_thrones.yml",
             "gender.yml",
             "ghostbusters.yml",
@@ -99,14 +123,21 @@ public class EnFile {
             "hipster.yml",
             "hitchhikers_guide_to_the_galaxy.yml",
             "hobbit.yml",
+            "hobby.yml",
+            "horse.yml",
             "house.yml",
             "how_i_met_your_mother.yml",
+            "how_to_train_your_dragon.yml",
             "id_number.yml",
             "industry_segments.yml",
             "internet.yml",
             "invoice.yml",
+            "jack_handey.yml",
             "job.yml",
+            "kaamelott.yml",
+            "kamen_rider.yml",
             "kpop.yml",
+            "league_of_legends.yml",
             "lebowski.yml",
             "lord_of_the_rings.yml",
             "lorem.yml",
@@ -184,7 +215,7 @@ public class EnFile {
             "zelda.yml");
 
     // files where the search path can't be derived from the filename
-    private static List<EnFile> FILES_WITH_A_DIFFERENT_PATH = Arrays.asList(
+    private static final List<EnFile> FILES_WITH_A_DIFFERENT_PATH = Arrays.asList(
             new EnFile("animal.yml", "creature"),
             new EnFile("cat.yml", "creature"),
             new EnFile("dog.yml", "creature"),
@@ -194,6 +225,7 @@ public class EnFile {
             new EnFile("witcher.yml", "games"),
             new EnFile("zelda.yml", "games"),
             new EnFile("elder_scrolls.yml", "games"),
+            new EnFile("minecraft.yml", "games"),
             new EnFile("phone_number.yml", "cell_phone")); // load phone number again with a differen path
 
 

@@ -10,6 +10,6 @@ public class MatzTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.matz().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.matz().quote(), not(CoreMatchers.notNullValue()));
     }
 }

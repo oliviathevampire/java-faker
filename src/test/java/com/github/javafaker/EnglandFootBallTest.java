@@ -14,14 +14,14 @@ public class EnglandFootBallTest extends AbstractFakerTest{
     @Test
     public void testLeague() {
         String league = faker.englandfootball().league();
-        assertThat(league, not(isEmptyOrNullString()));
+        assertThat(league, not(CoreMatchers.notNullValue()));
 
     }
 
     @Test
     public void testTeam() {
         String team = faker.englandfootball().team();
-        assertThat(team, not(isEmptyOrNullString()));
+        assertThat(team, not(CoreMatchers.notNullValue()));
 
     }
 }

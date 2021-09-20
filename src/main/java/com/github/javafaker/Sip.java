@@ -1,7 +1,5 @@
 package com.github.javafaker;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
 import java.util.ArrayList;
 
 /**
@@ -201,7 +199,7 @@ public final class Sip {
      * @return a fake SDP type SIP body byte array.
      */
     public byte[] bodyBytes() {
-        return bodyString().getBytes(UTF_8);
+        return bodyString().getBytes();
     }
 
     /**

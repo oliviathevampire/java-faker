@@ -15,6 +15,6 @@ public class PrincessBrideTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.princessBride().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.princessBride().quote(), not(CoreMatchers.notNullValue()));
     }
 }

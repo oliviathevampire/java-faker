@@ -1,0 +1,120 @@
+en:
+  faker:
+    computer:
+      type:
+        - server
+        - workstation
+      platform: 
+        - Linux
+        - macOS
+        - Windows
+      os:
+        linux:
+          - RHEL 6.10
+          - RHEL 7.7
+          - CentOS 8
+          - CentOS 7
+          - CentOS 6
+          - Debian 10.10.3
+          - Debian 9.9.10
+          - Ubuntu Server 18.04
+          - Ubuntu Server 18.10
+          - Ubuntu Server 19.04
+          - Ubuntu Server 19.10
+          - Ubuntu Server 20.04
+          - Ubuntu Server 20.10
+          - Ubuntu Server 21.04
+          - ArchLinux 2020.02.01
+          - openSUSE Leap 15.1
+          - Ubuntu Desktop 18.04
+          - Ubuntu Desktop 18.10
+          - Ubuntu Desktop 19.04
+          - Ubuntu Desktop 19.10
+          - Ubuntu Desktop 20.04
+          - Ubuntu Desktop 20.10
+          - Ubuntu Desktop 21.04
+          - Mageia 1
+          - Mageia 2
+          - Mageia 3
+          - Mageia 4
+          - Mageia 5
+          - Mageia 6
+          - Mageia 7
+          - Mageia 8
+          - Hannah Montana Linux
+          - AmogOS
+          - ReactOS
+          - Android
+        macos:
+          - Titan1U (Rhapsody Developer Release)
+          - Hera (X Server 1.0)
+          - Kodiak (Public Beta)
+          - Cheetah (10.0)
+          - Puma (10.1)
+          - Jauguar (10.2)
+          - Panther (10.3)
+          - Tiger (10.4)
+          - Leopard (10.5)
+          - Snow Leopard (10.6)
+          - Lion (10.7)
+          - Mountain Lion (10.8)
+          - Mavericks (10.9)
+          - Yosemite (10.10)
+          - El Capitan (10.11)
+          - Sierra (10.12)
+          - High Sierra (10.13)
+          - Mojave (10.14)
+          - Catalina (10.15)
+          - Big Sur (11)
+          - Monterey (12)
+        windows:
+          - Windows 11 Home
+          - Windows 11 Pro
+          - Windows 11 Enterprise
+          - Windows 11 Education
+          - Windows 11 Pro Education
+          - Windows 11 Pro for Workstations
+          - Windows 11 S
+          - Windows 10 Home
+          - Windows 10 Pro
+          - Windows 10 Enterprise
+          - Windows 10 Education
+          - Windows 10 Pro Education
+          - Windows 10 Pro for Workstations
+          - Windows 10 S
+          - Windows 1.0
+          - Windows 2.0
+          - Windows 2.10
+          - Windows 2.11
+          - Windows 3.0
+          - Windows 3.1
+          - Windows for Workgroups 3.1
+          - Windows for Workgroups 3.11
+          - Windows for Workgroups 3.2
+          - Windows 95
+          - Windows 95 OSR1
+          - Windows 95 OSR2
+          - Windows 95 OSR2.1
+          - Windows 95 OSR2.5
+          - Windows 98
+          - Windows 98 SE
+          - Windows ME
+          - Windows XP
+          - Windows XP SP1
+          - Windows XP SP2
+          - Windows XP SP3
+          - Windows XP SP4
+          - Windows Vista
+          - Windows Vista SP1
+          - Windows Vista SP2
+          - Windows Vista SP3
+          - Windows 7
+          - Windows 7 SP1
+          - Windows 7 SP2
+          - Windows 8
+          - Windows 8.1
+          - Windows Server 2020
+          - Windows Server 2021
+          - Windows Server 2019
+          - Windows Server 2016
+          - Windows Server 2012 R2

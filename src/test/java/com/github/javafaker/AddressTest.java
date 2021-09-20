@@ -99,7 +99,7 @@ public class AddressTest extends AbstractFakerTest {
 
     @Test
     public void testFullAddress() {
-        assertThat(faker.address().fullAddress(), not(isEmptyOrNullString()));
+        assertThat(faker.address().fullAddress(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
@@ -117,7 +117,7 @@ public class AddressTest extends AbstractFakerTest {
     @Test
     public void testCountyByZipCode() {
         faker = new Faker(new Locale("en-US"));
-        assertThat(faker.address().countyByZipCode("47732"), not(isEmptyOrNullString()));
+        assertThat(faker.address().countyByZipCode("47732"), not(CoreMatchers.notNullValue()));
     }
 
     @Test

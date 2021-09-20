@@ -24,7 +24,7 @@ public class LoremTest extends AbstractFakerTest {
 
     @Test
     public void wordShouldNotBeNullOrEmpty() {
-        assertThat(faker.lorem().word(), not(isEmptyOrNullString()));
+        assertThat(faker.lorem().word(), not(CoreMatchers.notNullValue()));
     }
 
     @Test

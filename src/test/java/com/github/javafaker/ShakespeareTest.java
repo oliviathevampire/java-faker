@@ -10,22 +10,22 @@ public class ShakespeareTest  extends AbstractFakerTest{
 
     @Test
     public void testHamletQuote() {
-        assertThat(faker.shakespeare().hamletQuote(), not(isEmptyOrNullString()));
+        assertThat(faker.shakespeare().hamletQuote(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testAsYouLikeItQuote() {
-        assertThat(faker.shakespeare().asYouLikeItQuote(), not(isEmptyOrNullString()));
+        assertThat(faker.shakespeare().asYouLikeItQuote(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testKingRichardIIIQuote() {
-        assertThat(faker.shakespeare().kingRichardIIIQuote(), not(isEmptyOrNullString()));
+        assertThat(faker.shakespeare().kingRichardIIIQuote(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testRomeoAndJulietQuote() {
-        assertThat(faker.shakespeare().romeoAndJulietQuote(), not(isEmptyOrNullString()));
+        assertThat(faker.shakespeare().romeoAndJulietQuote(), not(CoreMatchers.notNullValue()));
     }
 
 }

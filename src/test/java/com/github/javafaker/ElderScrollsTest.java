@@ -12,41 +12,41 @@ public class ElderScrollsTest extends AbstractFakerTest  {
 
     @Test
     public void testCity() {
-        assertThat(faker.elderScrolls().city(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().city(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testCreature() {
-        assertThat(faker.elderScrolls().creature(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().creature(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testDragon() {
-        assertThat(faker.elderScrolls().dragon(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().dragon(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testFirstName() {
-        assertThat(faker.elderScrolls().firstName(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().firstName(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testLastName() {
-        assertThat(faker.elderScrolls().lastName(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().lastName(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testRace() {
-        assertThat(faker.elderScrolls().race(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().race(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testRegion() {
-        assertThat(faker.elderScrolls().region(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().region(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void testQuote() {
-        assertThat(faker.elderScrolls().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.elderScrolls().quote(), not(CoreMatchers.notNullValue()));
     }
 }

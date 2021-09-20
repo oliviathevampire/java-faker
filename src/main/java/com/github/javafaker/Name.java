@@ -2,8 +2,11 @@ package com.github.javafaker;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.regex.Pattern;
+
 public class Name {
-    
+
+    private static final Pattern SINGLE_QUOTE = Pattern.compile("'");
     private final Faker faker;
 
     /**
@@ -122,9 +125,9 @@ public class Name {
     public String username() {
 
         String username = StringUtils.join(
-                firstName().replaceAll("'", "").toLowerCase(),
+                SINGLE_QUOTE.matcher(firstName()).replaceAll("").toLowerCase(),
                 ".",
-                lastName().replaceAll("'", "").toLowerCase()
+                SINGLE_QUOTE.matcher(lastName()).replaceAll("").toLowerCase()
         );
 
         return StringUtils.deleteWhitespace(username);

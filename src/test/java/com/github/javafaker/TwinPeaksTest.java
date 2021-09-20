@@ -21,6 +21,6 @@ public class TwinPeaksTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.twinPeaks().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.twinPeaks().quote(), not(CoreMatchers.notNullValue()));
     }
 }

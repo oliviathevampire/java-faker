@@ -10,6 +10,6 @@ public class ChuckNorrisTest extends AbstractFakerTest {
 
     @Test
     public void testFact() {
-        assertThat(faker.chuckNorris().fact(), not(isEmptyOrNullString()));
+        assertThat(faker.chuckNorris().fact(), not(CoreMatchers.notNullValue()));
     }
 }

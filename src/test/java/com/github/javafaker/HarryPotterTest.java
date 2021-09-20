@@ -21,7 +21,7 @@ public class HarryPotterTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.harryPotter().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.harryPotter().quote(), not(CoreMatchers.notNullValue()));
     }
 
     @Test

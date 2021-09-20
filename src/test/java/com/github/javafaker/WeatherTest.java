@@ -11,7 +11,7 @@ public class WeatherTest extends AbstractFakerTest {
 
     @Test
     public void description() {
-        assertThat(faker.weather().description(), not(isEmptyOrNullString()));
+        assertThat(faker.weather().description(), not(CoreMatchers.notNullValue()));
     }
 
     @Test

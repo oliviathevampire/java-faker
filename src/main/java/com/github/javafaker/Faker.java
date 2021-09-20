@@ -16,6 +16,7 @@ public class Faker {
     private final RandomService randomService;
     private final FakeValuesService fakeValuesService;
 
+    private final Adjective adjective;
     private final Ancient ancient;
     private final App app;
     private final Artist artist;
@@ -37,6 +38,7 @@ public class Faker {
     private final Country country;
     private final Currency currency;
     private final Company company;
+    private final Computer computer;
     private final Crypto crypto;
     private final IdNumber idNumber;
     private final Hacker hacker;
@@ -88,6 +90,7 @@ public class Faker {
     private final Weather weather;
     private final Lebowski lebowski;
     private final Medical medical;
+    private final Minecraft minecraft;
     private final Animal animal;
     private final BackToTheFuture backToTheFuture;
     private final PrincessBride princessBride;
@@ -131,6 +134,7 @@ public class Faker {
         this.randomService = random;
         this.fakeValuesService = fakeValuesService;
 
+        this.adjective = new Adjective(this);
         this.ancient = new Ancient(this);
         this.app = new App(this);
         this.artist = new Artist(this);
@@ -151,6 +155,7 @@ public class Faker {
         this.idNumber = new IdNumber(this);
         this.hacker = new Hacker(this);
         this.company = new Company(this);
+        this.computer = new Computer(this);
         this.crypto = new Crypto(this);
         this.elderScrolls = new ElderScrolls(this);
         this.commerce = new Commerce(this);
@@ -202,6 +207,7 @@ public class Faker {
         this.weather = new Weather(this);
         this.lebowski = new Lebowski(this);
         this.medical = new Medical(this);
+        this.minecraft = new Minecraft(this);
         this.country = new Country(this);
         this.animal = new Animal(this);
         this.backToTheFuture = new BackToTheFuture(this);
@@ -345,6 +351,10 @@ public class Faker {
         return this.fakeValuesService;
     }
 
+    public Adjective adjective() {
+        return adjective;
+    }
+
     public Ancient ancient() {
         return ancient;
     }
@@ -423,6 +433,10 @@ public class Faker {
 
     public Company company() {
         return company;
+    }
+
+    public Computer computer() {
+        return computer;
     }
 
     public Crypto crypto() {
@@ -625,6 +639,10 @@ public class Faker {
 
     public Medical medical() {
         return medical;
+    }
+
+    public Minecraft minecraft() {
+        return minecraft;
     }
 
     public Country country() {

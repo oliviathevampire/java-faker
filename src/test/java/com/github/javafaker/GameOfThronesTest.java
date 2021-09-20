@@ -31,6 +31,6 @@ public class GameOfThronesTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.gameOfThrones().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.gameOfThrones().quote(), not(CoreMatchers.notNullValue()));
     }
 }

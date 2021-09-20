@@ -194,7 +194,7 @@ public class FakerIT {
             String failureReason = method + " on " + object;
             assertThat(failureReason, returnValue, is(instanceOf(String.class)));
             final String returnValueAsString = (String) returnValue;
-            assertThat(failureReason, returnValueAsString, not(isEmptyOrNullString()));
+            assertThat(failureReason, returnValueAsString, not(CoreMatchers.notNullValue()));
             assertThat(failureReason + " is a slash encoded regex", returnValueAsString,
                        not(allOf(startsWith("/"), endsWith("/"))));
         }

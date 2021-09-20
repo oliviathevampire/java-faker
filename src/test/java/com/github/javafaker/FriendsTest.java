@@ -21,6 +21,6 @@ public class FriendsTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.friends().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.friends().quote(), not(CoreMatchers.notNullValue()));
     }
 }

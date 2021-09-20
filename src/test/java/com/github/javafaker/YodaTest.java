@@ -1,8 +1,8 @@
 package com.github.javafaker;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
 
@@ -13,6 +13,6 @@ public class YodaTest extends AbstractFakerTest {
 
     @Test
     public void quote() {
-        assertThat(faker.yoda().quote(), not(isEmptyOrNullString()));
+        assertThat(faker.yoda().quote(), not(CoreMatchers.notNullValue()));
     }
 }

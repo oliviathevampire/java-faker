@@ -23,37 +23,37 @@ public class RelationshipTest extends AbstractFakerTest {
 
     @Test
     public void anyTest() {
-        assertThat(faker.relationships().any(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().any(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void directTest() {
-        assertThat(faker.relationships().direct(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().direct(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void extendedTest() {
-        assertThat(faker.relationships().extended(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().extended(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void inLawTest() {
-        assertThat(faker.relationships().inLaw(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().inLaw(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void spouseTest() {
-        assertThat(faker.relationships().spouse(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().spouse(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void parentTest() {
-        assertThat(faker.relationships().parent(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().parent(), not(CoreMatchers.notNullValue()));
     }
 
     @Test
     public void siblingTest() {
-        assertThat(faker.relationships().sibling(), not(isEmptyOrNullString()));
+        assertThat(faker.relationships().sibling(), not(CoreMatchers.notNullValue()));
     }
 
     @Test(expected = RuntimeException.class)
